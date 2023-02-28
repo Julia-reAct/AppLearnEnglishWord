@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd07f73a-9bda-4b67-aad3-504b19181451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/element/AddWord/AddWord.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/AddWord/AddWord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/Library/Library.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/Library/Library.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/MainPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/MainPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/Practice/Practice.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/Practice/Practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +56,7 @@
       <workItem from="1677255282446" duration="128000" />
       <workItem from="1677272348550" duration="2864000" />
       <workItem from="1677360432569" duration="56000" />
-      <workItem from="1677360506962" duration="5777000" />
+      <workItem from="1677360506962" duration="8331000" />
     </task>
     <servers />
   </component>
