@@ -33,6 +33,24 @@ const Practice=(props)=>{
         }
         return setCounter(counter+1)
     }
+    let numbers = [];
+    let min, max, r, n, p;
+    min = 1;
+    max = 50;
+    r = 3;
+
+    for (let i = 0; i < r; i++) {
+        do {
+            n = Math.floor(Math.random() * (max - min + 1)) + min;
+            p = numbers.includes(n);
+            if(!p){
+                numbers.push(n);
+            }
+        }
+        while(p);
+    }
+
+    console.log(numbers.join(" - "));
 
     return(<div className='practice'>
             <div className='practice__english-word'>{englishWord}</div>
@@ -41,6 +59,10 @@ const Practice=(props)=>{
                     <label className='practice__label'>
                         World Ukraine
                     </label>
+                    <button className='practice__buttons_choice'></button>
+                    <button className='practice__buttons_choice'></button>
+                    <button className='practice__buttons_choice'></button>
+                    <button className='practice__buttons_choice'></button>
                     <input className='practice__input' placeholder="Word Ukraine"
                            {...register("NameUkrCheck",
                                {required:true,
