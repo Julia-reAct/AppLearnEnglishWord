@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AppLearnEnglishWord/static/css/main.2bc1dd9f.css",
-    "main.js": "/AppLearnEnglishWord/static/js/main.5ece80c6.js",
+    "main.js": "/AppLearnEnglishWord/static/js/main.f808fe84.js",
     "static/js/787.28cb0dcd.chunk.js": "/AppLearnEnglishWord/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/AppLearnEnglishWord/index.html",
     "main.2bc1dd9f.css.map": "/AppLearnEnglishWord/static/css/main.2bc1dd9f.css.map",
-    "main.5ece80c6.js.map": "/AppLearnEnglishWord/static/js/main.5ece80c6.js.map",
+    "main.f808fe84.js.map": "/AppLearnEnglishWord/static/js/main.f808fe84.js.map",
     "787.28cb0dcd.chunk.js.map": "/AppLearnEnglishWord/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2bc1dd9f.css",
-    "static/js/main.5ece80c6.js"
+    "static/js/main.f808fe84.js"
   ]
 }
