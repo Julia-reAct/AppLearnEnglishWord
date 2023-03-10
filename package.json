@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://Julia-reAct.github.io/AppLearnEnglishWord",
+  "homepage": "https://julia-react.github.io/AppLearnEnglishWord",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^4.24.6",
@@ -11,6 +11,8 @@
     "deep-equal": "^2.2.0",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
+    "react-button-group": "^1.0.2",
+    "react-button-group-tis": "^1.0.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.1",
     "react-lazyload": "^3.2.0",

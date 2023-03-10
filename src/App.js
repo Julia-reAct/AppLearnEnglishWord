@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './element/MainPage'
 import AddWord from './element/AddWord/AddWord'
 import Practice from './element/Practice/Practice'
@@ -80,10 +80,9 @@ function App() {
         wordlist[NameEng.toLowerCase()]=NameUkr.toLowerCase()
     }
 
-
   return (<div className="app">
       <header className="app__header">
-          <BrowserRouter className='app__browser_router'>
+          <HashRouter className='app__browser_router'>
               <Routes className='app__routers_list'>
                   <Route className='app__router' path='/' element={<MainPage/>}>
                   <Route className='app__router' path='AddWord' element={<AddWord onSubmit={onSubmit}  />}/>
@@ -91,7 +90,7 @@ function App() {
                   <Route className='app__router' path='Library' element={<Library wordlist={wordlist} />}/>
                   </Route>
               </Routes>
-          </BrowserRouter>
+          </HashRouter>
       </header>
     </div>
   );
