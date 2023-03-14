@@ -18,6 +18,40 @@ function App() {
         "house": "будинок",
         "internet": "інтернет",
         "jacket": "куртка",
+    });
+    const onSubmit = (NameEng,NameUkr) => {
+        console.log('some data inside app.js: ', NameEng,NameUkr);
+        wordlist[NameEng.toLowerCase()]=NameUkr.toLowerCase()
+    }
+
+  return (<div className="app">
+      <header className="app__header">
+          <HashRouter className='app__browser_router'>
+              <Routes className='app__routers_list'>
+                  <Route className='app__router' path='/' element={<MainPage/>}>
+                  <Route className='app__router' path='AddWord' element={<AddWord onSubmit={onSubmit}  />}/>
+                  <Route className='app__router' path='Practice' element={<Practice wordlist={wordlist} />}/>
+                  <Route className='app__router' path='Library' element={<Library wordlist={wordlist} />}/>
+                  </Route>
+              </Routes>
+          </HashRouter>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+/*const [wordlist] = useState({
+        "apple": "яблуко",
+        "banana": "банан",
+        "carrot": "морква",
+        "desk": "стіл",
+        "elephant": "слон",
+        "frog": "жаба",
+        "guitar": "гітара",
+        "house": "будинок",
+        "internet": "інтернет",
+        "jacket": "куртка",
         "kangaroo": "кенгуру",
         "lamp": "лампа",
         "mountain": "гора",
@@ -75,25 +109,5 @@ function App() {
         "nose": "нос",
         "ocean wave": "океан"
     });
-    const onSubmit = (NameEng,NameUkr) => {
-        console.log('some data inside app.js: ', NameEng,NameUkr);
-        wordlist[NameEng.toLowerCase()]=NameUkr.toLowerCase()
-    }
 
-  return (<div className="app">
-      <header className="app__header">
-          <HashRouter className='app__browser_router'>
-              <Routes className='app__routers_list'>
-                  <Route className='app__router' path='/' element={<MainPage/>}>
-                  <Route className='app__router' path='AddWord' element={<AddWord onSubmit={onSubmit}  />}/>
-                  <Route className='app__router' path='Practice' element={<Practice wordlist={wordlist} />}/>
-                  <Route className='app__router' path='Library' element={<Library wordlist={wordlist} />}/>
-                  </Route>
-              </Routes>
-          </HashRouter>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+* */
