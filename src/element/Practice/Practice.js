@@ -1,23 +1,23 @@
-import React, {useState, useEffect, useRef} from 'react'
-import { ButtonGroup } from 'react-button-group-tis'
+import React, {useState, useEffect} from 'react'
+import RandomUkrOrEngWord from './RandomCreater'
 import swal from 'sweetalert';
 import './Practice.css'
 
-
-
 const Practice=(props)=>{
     const [wordlistAsArrayChoose]=useState(Object.entries(props.wordlist))
-    const [wordlistAsArray]=useState(Object.entries(props.wordlist))
-    const [counter, setCounter] = useState(wordlistAsArray[0])
-    const [englishWord, ukrainianWord] = wordlistAsArray[counter]
+    const [wordlistAsArray,setWordlistAsArray]=useState(Object.entries(props.wordlist))
+    const [wordForCheck, setWordForCheck] = useState(wordlistAsArray[0])
+    const [showEnd, setShowEnd]=useState( false)
     const[word,setWord]=useState([])
+    const [englishWord, ukrainianWord] = wordForCheck
     let initialized = false
 
+
     const onSubmit = (data) => {
-        if(word[data]===ukrainianWord){
-            let NumberDelete = wordlistAsArray.splice(counter,1)
-            console.log(wordlistAsArray)
-            handleNextClick()
+        console.log('onSubmit', data);
+        if(data===ukrainianWord){
+            let deleteWord =wordlistAsArray.filter(a=>a[0]!==englishWord)
+            setWordlistAsArray(deleteWord)
             return swal({
                 title: "Good job!",
                 text: "You write word success!",
@@ -31,59 +31,50 @@ const Practice=(props)=>{
             icon: "error"
         });
     }
+
     useEffect(()=>{
         if(!initialized) {
             initialized = true
            RandomUkrOrEngWord(wordlistAsArrayChoose,englishWord,ukrainianWord,setWord)
         }
-    }, [counter]);
+    }, [wordForCheck]);
 
-    const handleNextClick=()=>{
-        let randomNumber = Math.floor(Math.random() * ((wordlistAsArray.length-1) - 0) + 0)
-        console.log('next counter', randomNumber);
-        setCounter(randomNumber)
+    useEffect(()=>{
+        if(wordlistAsArray.length>0) {
+            handleNextClick()
+        }
         if(wordlistAsArray.length===0){
-            return swal({
+            setShowEnd( true)
+            swal({
                 title: "Good job!",
                 text: "You Learn all word at the list!",
                 icon: "success"
-            });
+            })
         }
+    },[wordlistAsArray])
+
+    const handleNextClick=()=>{
+        let randomNextWord = wordlistAsArray[Math.floor(Math.random() * ((wordlistAsArray.length-1) - 0) + 0)]
+        setWordForCheck(randomNextWord)
+    }
+
+    const handleTryAgain=()=>{
+        setWordlistAsArray(wordlistAsArrayChoose)
+        setShowEnd(false)
     }
 
     return(<div className='practice'>
-            <div>{counter}</div>
-            <div className='practice__english-word'>{englishWord}</div>
-                    <ButtonGroup
-                        items={word}
-                        onItemClick={onSubmit}
-                        darkMode={false}
-                    />
+            {showEnd?
+                <input value="Try again" type="submit" onClick={handleTryAgain} />
+                :
+                <div>
+                    <div className='practice__english-word'>{englishWord}</div>
+                    {word.map((word =>
+                        <button key={word} onClick={() => {onSubmit(word)}}>{word}</button>
+                    ))}
+                </div>}
         </div>
     )
 }
-const RandomUkrOrEngWord =(wordlistAsArrayChoose,englishWord,ukrainianWord,setWord)=>{
-    let words = []
-    let min, max, r, n, p
-    min = 1
-    max = (wordlistAsArrayChoose.length-1)
-    r = 3
-    for (let i = 0; i < r; i++) {
-        do {
-            n = Math.floor(Math.random() * (max - min + 1)) + min;
-            p = words.includes(wordlistAsArrayChoose[n][1]) || wordlistAsArrayChoose[n][1] === ukrainianWord
-            if (!p) {
-                words.push(wordlistAsArrayChoose[n][1]);
-            }
-        }
-        while (p);
-    }
-    let randomPositionTrueWord = Math.random() * (4 - 0) + 0
-    words.splice(randomPositionTrueWord, 0, ukrainianWord)
-    /*let randomChooseEngOrUkr = ((Math.random()>=0.5)? 1 : 0)
-    console.log (randomChooseEngOrUkr)*/
-    setWord(words)
-}
-
 export default Practice;
 

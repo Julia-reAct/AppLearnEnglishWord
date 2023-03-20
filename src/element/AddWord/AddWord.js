@@ -49,7 +49,7 @@ const AddWord=(props)=>{
                          Ukraine word is wrong
                     </small> }
                 </div>
-                <input className='add_word__button' type="submit" />
+                <input className='add_word__button' type="submit" value="Send" />
             </form>
         </div>
     )
