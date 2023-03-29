@@ -1,63 +1,45 @@
 import React, {useState, useEffect} from 'react'
 import RandomUkrOrEngWord from './RandomCreater'
-import swal from 'sweetalert';
+import {ShowErrorMessage, ShowSuccessMessage} from '../../pages/ShowMessageSuccessOrError'
 import './Practice.css'
 
 const Practice=(props)=>{
     const [wordlistAsArrayChoose]=useState(Object.entries(props.wordlist))
     const [wordlistAsArray,setWordlistAsArray]=useState(Object.entries(props.wordlist))
     const [wordForCheck, setWordForCheck] = useState(wordlistAsArray[0])
-    const [showEnd, setShowEnd]=useState( false)
-    const[word,setWord]=useState([])
     const [englishWord, ukrainianWord] = wordForCheck
+    const[word,setWord]=useState([])
+    const [showNumber,setShowNumber]=useState(0)
+    const [showEnd, setShowEnd]=useState( false)
     let initialized = false
-
-
     const onSubmit = (data) => {
-        console.log('onSubmit', data);
-        if(data===ukrainianWord){
+        if(data===ukrainianWord||data===englishWord){
             let deleteWord =wordlistAsArray.filter(a=>a[0]!==englishWord)
             setWordlistAsArray(deleteWord)
-            return swal({
-                title: "Good job!",
-                text: "You write word success!",
-                icon: "success"
-            });
+            ShowSuccessMessage(wordlistAsArray)
             initialized=false
+        } else {
+            ShowErrorMessage()
         }
-        return swal({
-            title: "Oops",
-            text: "Something went wrong!",
-            icon: "error"
-        });
     }
-
     useEffect(()=>{
         if(!initialized) {
             initialized = true
-           RandomUkrOrEngWord(wordlistAsArrayChoose,englishWord,ukrainianWord,setWord)
+           RandomUkrOrEngWord(wordlistAsArrayChoose,englishWord,ukrainianWord,setWord,setShowNumber)
         }
     }, [wordForCheck]);
-
     useEffect(()=>{
         if(wordlistAsArray.length>0) {
             handleNextClick()
-        }
-        if(wordlistAsArray.length===0){
-            setShowEnd( true)
-            swal({
-                title: "Good job!",
-                text: "You Learn all word at the list!",
-                icon: "success"
-            })
+        } else {
+            setShowEnd(true)
+            ShowSuccessMessage(wordlistAsArray)
         }
     },[wordlistAsArray])
-
     const handleNextClick=()=>{
         let randomNextWord = wordlistAsArray[Math.floor(Math.random() * ((wordlistAsArray.length-1) - 0) + 0)]
         setWordForCheck(randomNextWord)
     }
-
     const handleTryAgain=()=>{
         setWordlistAsArray(wordlistAsArrayChoose)
         setShowEnd(false)
@@ -65,12 +47,12 @@ const Practice=(props)=>{
 
     return(<div className='practice'>
             {showEnd?
-                <input value="Try again" type="submit" onClick={handleTryAgain} />
+                <input className='practice__button' value="Try again" type="submit" onClick={handleTryAgain} />
                 :
                 <div>
-                    <div className='practice__english-word'>{englishWord}</div>
+                    <div className='practice__check-word'>{showNumber===0?ukrainianWord:englishWord}</div>
                     {word.map((word =>
-                        <button key={word} onClick={() => {onSubmit(word)}}>{word}</button>
+                        <button className='practice__answer-word' key={word} onClick={() => {onSubmit(word)}}>{word}</button>
                     ))}
                 </div>}
         </div>

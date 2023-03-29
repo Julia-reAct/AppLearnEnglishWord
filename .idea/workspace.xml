@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eeb8f466-d184-41f9-b62f-a4bb7af0259e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/element/Practice/RandomCreater.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/AddWord/AddWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/AddWord/AddWord.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/Practice/Practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Practice/Practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Practice/RandomCreater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Practice/RandomCreater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ShowMessageSuccessOrError.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ShowMessageSuccessOrError.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,10 @@
       <workItem from="1678721807088" duration="22846000" />
       <workItem from="1678824306934" duration="9420000" />
       <workItem from="1679174963261" duration="9230000" />
-      <workItem from="1679351933912" duration="1640000" />
+      <workItem from="1679351933912" duration="2180000" />
+      <workItem from="1679498227810" duration="6875000" />
+      <workItem from="1679674817655" duration="18000" />
+      <workItem from="1680029107749" duration="5002000" />
     </task>
     <servers />
   </component>

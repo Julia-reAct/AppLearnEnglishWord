@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 
-const RandomUkrOrEngWord =(wordlistAsArrayChoose,englishWord,ukrainianWord,setWord)=>{
-    const [selectEngOrUkr, setSelectEngOrUkr]=useState( 1)
+const RandomUkrOrEngWord =(wordlistAsArrayChoose,englishWord,ukrainianWord,setWord,setShowNumber)=>{
+    let chooseLanguage=Math.random()<0.5?[0,englishWord]:[1,ukrainianWord]
+    const [number, word] = chooseLanguage
+    console.log(chooseLanguage)
     let words = []
     let min, max, r, n, p
     min = 1
@@ -10,18 +12,17 @@ const RandomUkrOrEngWord =(wordlistAsArrayChoose,englishWord,ukrainianWord,setWo
     for (let i = 0; i < r; i++) {
         do {
             n = Math.floor(Math.random() * (max - min + 1)) + min;
-            p = words.includes(wordlistAsArrayChoose[n][1]) || wordlistAsArrayChoose[n][1] === ukrainianWord
+            p = words.includes(wordlistAsArrayChoose[n][number]) || wordlistAsArrayChoose[n][number] === word
             if (!p) {
-                words.push(wordlistAsArrayChoose[n][1]);
+                words.push(wordlistAsArrayChoose[n][number]);
             }
         }
         while (p);
     }
     let randomPositionTrueWord = Math.random() * (4 - 0) + 0
-    words.splice(randomPositionTrueWord, 0, ukrainianWord)
-    /*let randomChooseEngOrUkr = ((Math.random()>=0.5)? 1 : 0)
-    console.log (randomChooseEngOrUkr)*/
+    words.splice(randomPositionTrueWord, 0, word)
     setWord(words)
+    setShowNumber(number)
 }
 
 export default RandomUkrOrEngWord;
