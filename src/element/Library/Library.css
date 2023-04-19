@@ -1,3 +1,23 @@
 .library{
-    padding:200px 400px
+    padding:70px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+    grid-gap: 15px;
+    background: url('../../image/leaf6.png') 0.5% 98%/auto 400px no-repeat,
+    url('../../image/leaf5.png') 106% 4%/370px auto no-repeat;
+}
+.library__block{
+    background: rgb(16,221,194);
+    background: linear-gradient(90deg, rgba(16,221,194,0.05) 49%, rgba(255,255,255,0.9) 51%);
+    display: grid;
+    grid-template-columns: 140px 140px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 1px 1px 2px 1px #f5f5f5;
+    border-radius: 10px;
+    padding: 15px 0px;
+}
+.library__word_eng, .library__word_ukr{
+    color: #173753;
+    margin-left: 20px;
 }

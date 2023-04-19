@@ -47,13 +47,21 @@ const Practice=(props)=>{
 
     return(<div className='practice'>
             {showEnd?
-                <input className='practice__button' value="Try again" type="submit" onClick={handleTryAgain} />
+                <div className='practice__try-again'>
+                <input className='practice__button-again' value="Try again" type="submit" onClick={handleTryAgain} />
+                </div>
                 :
-                <div>
-                    <div className='practice__check-word'>{showNumber===0?ukrainianWord:englishWord}</div>
-                    {word.map((word =>
-                        <button className='practice__answer-word' key={word} onClick={() => {onSubmit(word)}}>{word}</button>
+                <div className='practice__check'>
+                    <div className='practice__text'>
+                        <div className='practice__check-word'>{showNumber===0?ukrainianWord:englishWord}</div>
+                    </div>
+                    <div className='practice__answers'>
+                        {word.map((word =>
+                            <button className='practice__answer-word' key={word} onClick={() => {onSubmit(word)}}>
+                                {word}
+                            </button>
                     ))}
+                    </div>
                 </div>}
         </div>
     )

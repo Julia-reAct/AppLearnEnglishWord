@@ -15,7 +15,7 @@ const AddWord=(props)=>{
 
     return(<div className='add_word'>
             <form className='add_word__form' onSubmit={handleSubmit(onSubmit)}>
-                <div className='add_word__block'>
+                <div className='add_word__block_add'>
                     <label className='add_word__label'>
                          English word
                     </label>
@@ -34,7 +34,7 @@ const AddWord=(props)=>{
                     </small> }
                 </div>
 
-                <div className='add_word__block'>
+                <div className='add_word__block_add'>
                     <label className='add_word__label'>
                         Ukraine word
                     </label>
