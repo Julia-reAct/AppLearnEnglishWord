@@ -3,24 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eeb8f466-d184-41f9-b62f-a4bb7af0259e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/AddWord/AddWord.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/AddWord/AddWord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/AddWord/AddWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/AddWord/AddWord.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/HomePage/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HomePage/HomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/Library/Library.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Library/Library.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/Library/Library.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Library/Library.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/MainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/MainPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/Practice/Practice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Practice/Practice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/Practice/Practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Practice/Practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/Practice/RandomCreater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Practice/RandomCreater.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/leaf9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/leaf9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ShowMessageSuccessOrError.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ShowMessageSuccessOrError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +71,7 @@
       <workItem from="1680117541447" duration="13468000" />
       <workItem from="1680525522094" duration="32979000" />
       <workItem from="1681762800089" duration="8165000" />
-      <workItem from="1681824906814" duration="8529000" />
+      <workItem from="1681824906814" duration="9434000" />
     </task>
     <servers />
   </component>
