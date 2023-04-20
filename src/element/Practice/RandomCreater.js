@@ -24,5 +24,4 @@ const RandomUkrOrEngWord =(wordlistAsArrayChoose,englishWord,ukrainianWord,setWo
     setWord(words)
     setShowNumber(number)
 }
-
 export default RandomUkrOrEngWord;

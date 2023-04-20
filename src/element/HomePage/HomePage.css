@@ -1,0 +1,84 @@
+:root{
+    --sizeTextForUserButton:30px;
+    --sizeTextForUserButtonTable:25px;
+    --sizeTextForUserButtonPhone:20px;
+
+    --white:#FFFFFF;
+    --blue: #15b7b9;
+    --darkBlue:#173753;
+    --purpur:#8e6c88;
+}
+.home_page{
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 100px 250px;
+    align-content: center;
+    justify-content: center;
+    background: url('../../image/leaf9.png') 0% 100%/350px auto no-repeat,
+    url('../../image/leaf8.png')100% 0%/350px auto no-repeat;
+}
+.home_page__block_text{
+    padding-top: 80px;
+}
+.home_page__text_for_user{
+    font-size: var(--sizeTextForUserButton);
+    font-weight: 500;
+    color: var(--darkBlue);
+}
+.home_page__block_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_page__button-play{
+    text-decoration: none;
+    padding: 25px 65px;
+    border-radius: 25px;
+    font-size: var(--sizeTextForUserButton);
+    color:var(--white);
+    background:var(--purpur);
+    border: var(--white);
+    box-shadow: 1px 1px 5px 2px var(--white);
+    cursor: pointer;
+
+}
+@media (max-width: 1280px) {
+
+}
+@media (max-width: 1024px) {
+    .home_page{
+        background: url('../../image/leaf9.png') 0% 100%/300px auto no-repeat,
+        url('../../image/leaf8.png')100% 0%/300px auto no-repeat;
+    }
+}
+@media (max-width: 820px) {
+    .home_page{
+        background: url('../../image/leaf9.png') 0% 100%/250px auto no-repeat,
+        url('../../image/leaf8.png')100% 0%/250px auto no-repeat;
+    }
+}
+@media (max-width: 600px) {
+    .home_page{
+        background: url('../../image/leaf9.png') 0% 100%/200px auto no-repeat,
+        url('../../image/leaf8.png')100% 0%/200px auto no-repeat;
+    }
+    .home_page__block_text{
+        padding-top: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .home_page{
+        background: url('../../image/leaf9.png') 0% 100%/180px auto no-repeat,
+        url('../../image/leaf8.png')100% 0%/180px auto no-repeat;
+    }
+    .home_page__text_for_user{
+        font-size: var(--sizeTextForUserButtonTable);
+        width: 340px;
+    }
+    .home_page__button-play{
+        padding: 20px 45px;
+        border-radius: 25px;
+        font-size: var(--sizeTextForUserButtonTable);
+
+    }
+}

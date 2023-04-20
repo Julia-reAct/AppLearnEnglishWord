@@ -1,17 +1,32 @@
+:root{
+    --sizeCheckWord:30px;
+    --sizeCheckWordPhone:45px;
+    --sizeTrueFalseWord: 15px;
+    --sizeTrueFalseWordPhone: 25px;
+
+    --grey:#f5f5f5;
+    --greyOpocity:rgba(245, 245, 245, 0.8);
+    --white:#FFFFFF;
+    --blue: #15b7b9;
+    --red:#ff4e4e;
+    --purpur:#8e6c88;
+}
 .practice{
+    flex-grow: 1;
     background: url('../../image/leaf (1).png') 15% 88%/350px 350px no-repeat,
     url('../../image/16.png') 88% 20%/300px 300px no-repeat;
     padding:100px 0px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .practice__try-again{}
 .practice__button-again{}
 .practice__check{
     padding: 60px;
     border-radius: 20px;
-    box-shadow: 1px 1px 5px 2px #f5f5f5;
-    background: rgba(245, 245, 245, 0.9);
+    box-shadow: 1px 1px 5px 2px var(--grey);
+    background: var(--greyOpocity)
 }
 .practice__text{
     display: flex;
@@ -19,9 +34,9 @@
     padding: 20px;
 }
 .practice__check-word{
-    font-size: 30px;
+    font-size: var(--sizeCheckWord);
     font-weight: 500;
-    color: #15B7B9;
+    color: var(--blue);
 }
 .practice__answers{
     padding: 30px 0px;
@@ -30,12 +45,81 @@
     justify-content: center;
     grid-gap: 20px;
 }
-.practice__answer-word{
+.true,.false{
     padding: 8px 20px;
-    font-size: 15px;
-    background:rgba(142, 108, 136, 1);
-    color:white;
-    border: white;
-    box-shadow: 1px 1px 5px 2px white;
+    font-size: var(--sizeTrueFalseWord);
+    background:var(--purpur);
+    color:var(--white);
+    border: var(--white);
+    box-shadow: 1px 1px 5px 2px var(--white);
     border-radius: 5px;
+    cursor: pointer;
+}
+.true:active{
+    background: var(--blue);
+}
+.false:active{
+    background:var(--red);
+
+}
+@media (max-width: 1280px) {
+
+}
+@media (max-width: 1024px) {
+    .practice{
+        background: url('../../image/leaf (1).png') 5% 100%/auto 250px no-repeat,
+        url('../../image/16.png') 100% 5%/250px auto no-repeat;
+    }
+    .practice__check{
+        width: 500px;
+    }
+    .true,.false{
+        padding: 3px 10px;
+    }
+}
+@media (max-width: 820px) {
+    .practice__check{
+        width: 700px;
+        padding: 30px;
+    }
+    .practice__answers{
+        padding: 0px 40px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .practice__check-word{
+        font-size: var(--sizeCheckWordPhone);
+    }
+    .true,.false{
+        padding:10px;
+        font-size: var(--sizeTrueFalseWordPhone);
+    }
+}
+@media (max-width: 600px) {
+    .practice{
+        background: url('../../image/leaf (1).png') 5% 100%/auto 200px no-repeat,
+        url('../../image/16.png') 100% 5%/200px auto no-repeat;
+    }
+    .practice__check{
+        width: 400px;
+        padding: 40px;
+    }
+    .practice__answers{
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+    .true,.false{
+        padding: 5px;
+    }
+}
+@media (max-width: 480px) {
+    .practice{
+        background: url('../../image/leaf (1).png') 5% 100%/auto 150px no-repeat,
+        url('../../image/16.png') 100% 5%/150px auto no-repeat;
+    }
+    .practice__check{
+        width: 370px;
+        padding: 30px;
+    }
+
 }

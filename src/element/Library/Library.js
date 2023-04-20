@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './Library.css'
 
 const Library=(props)=>{
@@ -15,6 +15,4 @@ const Library=(props)=>{
     </div>)
 
 }
-
-
 export default Library;

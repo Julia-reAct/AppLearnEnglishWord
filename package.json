@@ -16,6 +16,7 @@
     "react-button-group-tis": "^1.0.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.1",
+    "react-hot-toast": "^2.4.0",
     "react-lazyload": "^3.2.0",
     "react-scripts": "5.0.1",
     "react-window": "^1.8.8",
@@ -52,6 +53,8 @@
   },
   "devDependencies": {
     "@welldone-software/why-did-you-render": "^7.0.1",
+    "eslint": "^8.37.0",
+    "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0",
     "react-router-dom": "^6.8.1"
   }

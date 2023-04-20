@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import RandomUkrOrEngWord from './RandomCreater'
-import {ShowErrorMessage, ShowSuccessMessage} from '../../pages/ShowMessageSuccessOrError'
+import ShowSuccessMessage from '../../pages/ShowMessageSuccessOrError'
 import './Practice.css'
 
 const Practice=(props)=>{
@@ -16,11 +16,8 @@ const Practice=(props)=>{
         if(data===ukrainianWord||data===englishWord){
             let deleteWord =wordlistAsArray.filter(a=>a[0]!==englishWord)
             setWordlistAsArray(deleteWord)
-            ShowSuccessMessage(wordlistAsArray)
             initialized=false
-        } else {
-            ShowErrorMessage()
-        }
+        } else {}
     }
     useEffect(()=>{
         if(!initialized) {
@@ -33,7 +30,7 @@ const Practice=(props)=>{
             handleNextClick()
         } else {
             setShowEnd(true)
-            ShowSuccessMessage(wordlistAsArray)
+            ShowSuccessMessage()
         }
     },[wordlistAsArray])
     const handleNextClick=()=>{
@@ -48,7 +45,7 @@ const Practice=(props)=>{
     return(<div className='practice'>
             {showEnd?
                 <div className='practice__try-again'>
-                <input className='practice__button-again' value="Try again" type="submit" onClick={handleTryAgain} />
+                <input className='practice__button-again' value='Try again' type='submit' onClick={handleTryAgain} />
                 </div>
                 :
                 <div className='practice__check'>
@@ -57,7 +54,9 @@ const Practice=(props)=>{
                     </div>
                     <div className='practice__answers'>
                         {word.map((word =>
-                            <button className='practice__answer-word' key={word} onClick={() => {onSubmit(word)}}>
+                            <button className={wordForCheck.includes(word)?'true':'false'}
+                                    key={word}
+                                    onClick={() => {onSubmit(word)}}>
                                 {word}
                             </button>
                     ))}
