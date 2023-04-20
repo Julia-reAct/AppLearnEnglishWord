@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/AppLearnEnglishWord/static/css/main.2bc1dd9f.css",
-    "main.js": "/AppLearnEnglishWord/static/js/main.f808fe84.js",
+    "main.css": "/AppLearnEnglishWord/static/css/main.0833b1ce.css",
+    "main.js": "/AppLearnEnglishWord/static/js/main.3858132c.js",
     "static/js/787.28cb0dcd.chunk.js": "/AppLearnEnglishWord/static/js/787.28cb0dcd.chunk.js",
+    "static/media/leaf9.png": "/AppLearnEnglishWord/static/media/leaf9.1bfa0564f34ed3fb5a8c.png",
+    "static/media/leaf (1).png": "/AppLearnEnglishWord/static/media/leaf (1).fb9a040b32070b19a2ce.png",
+    "static/media/leaf8.png": "/AppLearnEnglishWord/static/media/leaf8.08127cac45a9dcc26578.png",
+    "static/media/leaf6.png": "/AppLearnEnglishWord/static/media/leaf6.72084ce5a1474796ef58.png",
+    "static/media/leaf (3).png": "/AppLearnEnglishWord/static/media/leaf (3).d0131ecf3978d75b4dce.png",
+    "static/media/16.png": "/AppLearnEnglishWord/static/media/16.6befdec33e5b36e8eee1.png",
+    "static/media/leaf5.png": "/AppLearnEnglishWord/static/media/leaf5.5633086791fbe03f1a9f.png",
+    "static/media/leaf7.png": "/AppLearnEnglishWord/static/media/leaf7.ee9d3c081fffbf6d7219.png",
+    "static/media/logo-removebg-preview.png": "/AppLearnEnglishWord/static/media/logo-removebg-preview.48c321751050e9937176.png",
     "index.html": "/AppLearnEnglishWord/index.html",
-    "main.2bc1dd9f.css.map": "/AppLearnEnglishWord/static/css/main.2bc1dd9f.css.map",
-    "main.f808fe84.js.map": "/AppLearnEnglishWord/static/js/main.f808fe84.js.map",
+    "main.0833b1ce.css.map": "/AppLearnEnglishWord/static/css/main.0833b1ce.css.map",
+    "main.3858132c.js.map": "/AppLearnEnglishWord/static/js/main.3858132c.js.map",
     "787.28cb0dcd.chunk.js.map": "/AppLearnEnglishWord/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bc1dd9f.css",
-    "static/js/main.f808fe84.js"
+    "static/css/main.0833b1ce.css",
+    "static/js/main.3858132c.js"
   ]
 }
