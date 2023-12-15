@@ -21,7 +21,16 @@
     align-items: center;
 }
 .practice__try-again{}
-.practice__button-again{}
+.practice__button-again{
+     padding: 8px 20px;
+    font-size: var(--sizeTrueFalseWord);
+    background:var(--purpur);
+    color:var(--white);
+    border: var(--white);
+    box-shadow: 1px 1px 5px 2px var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+}
 .practice__check{
     padding: 60px;
     border-radius: 20px;
